@@ -13,7 +13,7 @@ int main()
         perror("opening input2.txt failed");
         return 1;
     }
-    /*Number is used to print the numbers in the file*/
+    /*Number is used to store all the elements in the file*/
     int number[2251];
 
     /*Create an character that has the same length as the file*/
@@ -38,21 +38,25 @@ int main()
         printf("%d \n", number[j]);
     }
 
-    /*Print the number elements in the file*/
+    /*Print the number of elements in the file*/
     printf("The number of elements in the file is: %d\n", i);
 
-    /*Sorts the file and prints the results*/
+    /*Initialize integers, used to find maximum calories*/
     int a = 0;
     int calories = 0; 
     int maximum_calories = 0; 
+
+    /*Loop through the file*/
     while(a < i)
     {
         calories = 0;
+        /*Loop trough the elfs*/
         while(a < i && number[a] != 0)
         {
             calories +=number[a];
             a++;
         }
+        /*Store maximum calories*/
         if (calories > maximum_calories)
         {
             maximum_calories = calories;
@@ -60,6 +64,7 @@ int main()
         a++;
 
     }  
-    printf("Maximum calories %d \n", maximum_calories);
+    /*Find maximum calories*/
+    printf("Maximum calories is: %d \n", maximum_calories);
     return 0;
 }
