@@ -7,7 +7,7 @@ int main(){
     char character;
     char data[DATA_SIZE];
     char opponent;
-    char me;
+    char outcome;
     int score = 0;
     int rock = 1;
     int paper = 2;
@@ -46,32 +46,32 @@ int main(){
     /*Compare my opponent moves and choose the right shape. Then calculate the score*/
     for(j = 0; j < DATA_SIZE; j++){
         opponent = data[j];
-        me = data[j+1];
-        if(opponent == 'A' && me == 'X'){
+        outcome = data[j+1];
+        if(opponent == 'A' && outcome == 'X'){
             score += scissors + loss;
         }
-        else if(opponent == 'A' && me == 'Y'){
+        else if(opponent == 'A' && outcome == 'Y'){
             score += rock + draw;
         }
-        else if(opponent == 'A' && me == 'Z'){
+        else if(opponent == 'A' && outcome == 'Z'){
             score += paper + win;
         }
-        else if(opponent == 'B' && me == 'X'){
+        else if(opponent == 'B' && outcome == 'X'){
             score += rock + loss;
         }
-        else if(opponent == 'B' && me == 'Y'){
+        else if(opponent == 'B' && outcome == 'Y'){
             score += paper + draw;
         }
-        else if(opponent == 'B' && me == 'Z'){
+        else if(opponent == 'B' && outcome == 'Z'){
             score += scissors + win;
         }
-        else if(opponent == 'C' && me == 'X'){
+        else if(opponent == 'C' && outcome == 'X'){
             score += paper + loss;
         }
-        else if(opponent == 'C' && me == 'Y'){
+        else if(opponent == 'C' && outcome == 'Y'){
             score += scissors + draw;
         }
-        else if(opponent == 'C' && me == 'Z'){
+        else if(opponent == 'C' && outcome == 'Z'){
             score += rock + win;
         }
     }
