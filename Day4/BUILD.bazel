@@ -7,3 +7,11 @@ cc_binary(
     copts = ["-std=c90"],
     toolchains = ["@bazel_tools//tools/cpp:toolchain"],
 )
+
+cc_binary(
+    name = "Day4Part2",
+    srcs = ["Day4Part2.c"],
+    visibility = ["//visibility:public"],
+    copts = ["-std=c90"],
+    toolchains = ["@bazel_tools//tools/cpp:toolchain"],
+)
