@@ -2,7 +2,6 @@
 #include <string.h>
 
 int main(){
-    /*Define variables and constant*/
     /*Open the file*/
     FILE * fPointer;
     fPointer = fopen("//home//martin//AoC//Day5//input.txt", "r");
