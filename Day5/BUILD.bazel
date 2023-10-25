@@ -6,4 +6,5 @@ cc_binary(
     visibility = ["//visibility:public"],
     copts = ["-std=c90"],
     toolchains = ["@bazel_tools//tools/cpp:toolchain"],
+    data = ["input.txt"],
 )

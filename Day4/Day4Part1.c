@@ -14,7 +14,7 @@ int main(){
 
     /*Open the file*/
     FILE * fPointer;
-    fPointer = fopen("//home//martin//AoC//Day4//input.txt", "r");
+    fPointer = fopen("Day4/input.txt", "r");
 
     /*If there exist no file, return an error*/
     if (fPointer == NULL){
