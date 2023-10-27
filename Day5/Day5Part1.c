@@ -73,39 +73,32 @@ int main() {
         /*Store the number of crates that should be moved, the column to move from and the column to move to*/
         sscanf(line, "move %d from %d to %d", &number_crates, &move_from, &move_to);
         move_from--;
-        move_to--;
+        move_to--;    
 
         /*Loop until all crates have been moved*/
-        move_done = 0;        
+        move_done = 0; 
+        j = 0;
         while(move_done < number_crates){
-
-            /*First delete the crate to be moved*/
-            /*Loop through each row in crates and find the row that has the crate that should be moved*/
-            j = 0;
-            while(j < MAX_SIZE && move_done < number_crates){
-                if(crates[j][move_from] == ' '){
-                    j++;
-                    continue;
-                }
-                /*Remove the crate from the array*/
-                char_move_from = crates[j][move_from];
-                crates[j][move_from] = ' ';
-
-                /*Insert the crate at the disered position by looping from the end of crates.*/
-                /*The crate is inserted at the first empty place in the disered column*/
-                int f = MAX_SIZE - 1;
-                do{
-                    if (crates[f][move_to] != ' ' && crates[f - 1][move_to] == ' '){
-                        crates[f - 1][move_to] = char_move_from;
-                        move_done++;
-                        break;
-                    }
-                    f--;
-                } while(f >= 0);
+            if(crates[j][move_from] == ' '){
+                j++;
+                continue;
             }
-            j++;
-            
-        }
+            /*First remove the crate from the array*/
+            char_move_from = crates[j][move_from];
+            crates[j][move_from] = ' ';
+
+            /*Insert the crate at the disered position by looping from the end of crates.*/
+            /*The crate is inserted at the first empty place in the disered column*/
+            int f = MAX_SIZE - 1;
+            do{
+                if (crates[f][move_to] != ' ' && crates[f - 1][move_to] == ' '){
+                    crates[f - 1][move_to] = char_move_from;
+                    move_done++;
+                    break;
+                }
+                f--;
+            } while(f >= 0);
+        }  
     }
     
     /*Close the file*/
