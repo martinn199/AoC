@@ -4,7 +4,7 @@ cc_binary(
     name = "Day5Part1",
     srcs = ["Day5Part1.c"],
     visibility = ["//visibility:public"],
-    copts = ["-std=c90"],
+    copts = ["-std=c89"],
     toolchains = ["@bazel_tools//tools/cpp:toolchain"],
     data = ["input.txt"],
 )
