@@ -1,0 +1,10 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "Day8Part1",
+    srcs = ["Day8Part1.c"],
+    visibility = ["//visibility:public"],
+    copts = ["-std=c89"],
+    toolchains = ["@bazel_tools//tools/cpp:toolchain"],
+    data = ["input.txt"],
+)
