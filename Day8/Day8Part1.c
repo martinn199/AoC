@@ -65,7 +65,7 @@ int main() {
             /*If there is not a tree that is taller, add 1 to the number of visible trees*/
             else{
                 for(i = 0; i < row; i++){
-                    if(i != row && (grid[i][col] - '0' >= currentTreeHeight)){
+                    if(grid[i][col] - '0' >= currentTreeHeight){
                         top = 0;
                     }
                 }
