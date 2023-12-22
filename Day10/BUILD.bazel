@@ -1,0 +1,9 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "Day10Part1",
+    srcs = ["Day10Part1.c"],
+    visibility = ["//visibility:public"],
+    copts = ["-std=c89"],
+    data = ["input.txt"],
+)
