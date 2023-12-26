@@ -32,10 +32,10 @@ void test_CalculateSignalStrength(void)
 /*Here I test that my function can handles zeros correctly*/
 void test_CalculateSignalStrengthWithZeros(void)
 {
-    int cycle1[221] = {0};
+    /*Now the register values are zeros*/
+    int cycle2[221] = {0};
 
-
-    TEST_ASSERT_EQUAL_INT(0, calculate_signal_strenghts(cycle1));
+    TEST_ASSERT_EQUAL_INT(0, calculate_signal_strenghts(cycle2));
 }
 
 /*Run the tests*/
