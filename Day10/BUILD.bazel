@@ -7,3 +7,11 @@ cc_binary(
     copts = ["-std=c89"],
     data = ["input.txt"],
 )
+
+cc_binary(
+    name = "Day10Part2",
+    srcs = ["Day10Part2.c"],
+    visibility = ["//visibility:public"],
+    copts = ["-std=c89"],
+    data = ["input.txt"],
+)
