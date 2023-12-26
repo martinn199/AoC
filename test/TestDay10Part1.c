@@ -17,6 +17,7 @@ void tearDown(void)
 /*Here I test that my function for calculating the sum of signal strenghts actually gives the corrent answer*/
 void test_CalculateSignalStrength(void)
 {
+    /*The actual register values, X, are*/
     int cycle1[221] = {0};
     cycle1[20] = 21;
     cycle1[60] = 21;
