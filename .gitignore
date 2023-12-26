@@ -33,3 +33,5 @@ eclipse-*bin/
 .bazelversion
 # User-specific .bazelrc
 user.bazelrc
+test_Day10Part1
+unity/
